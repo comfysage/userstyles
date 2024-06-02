@@ -132,7 +132,7 @@ export const verifyMetadata = async (
 };
 
 const assertions = (userstyle: string, userstyles: Userstyles) => {
-  const prefix = "https://github.com/catppuccin/userstyles";
+  const prefix = "https://github.com/comfysage/userstyles";
 
   if (!userstyles[userstyle]) {
     log("Metadata section for this userstyle has not been added", {
@@ -146,10 +146,10 @@ const assertions = (userstyle: string, userstyles: Userstyles) => {
       Array.isArray(userstyles[userstyle].name)
         ? (userstyles[userstyle].name as string[]).join("/")
         : userstyles[userstyle].name
-    } Catppuccin`,
-    namespace: `github.com/catppuccin/userstyles/styles/${userstyle}`,
+    } Evergarden`,
+    namespace: `github.com/comfysage/userstyles/styles/${userstyle}`,
     homepageURL: `${prefix}/tree/main/styles/${userstyle}`,
-    description: `Soothing pastel theme for ${
+    description: `comfy theme for ${
       Array.isArray(userstyles[userstyle].name)
         ? formatListOfItems(userstyles[userstyle].name as string[])
         : userstyles[userstyle].name
