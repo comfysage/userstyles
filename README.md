@@ -51,7 +51,7 @@ See instructions on the [GitHub release page](https://github.com/comfysage/users
 
 1. Enable CSP Patching from `Stylus Settings` > `Advanced`.
 2. Install the theme:
-   - `https://github.com/comfysage/userstyles/raw/main/styles/<name>/catppuccin.user.css`
+   - `https://github.com/comfysage/userstyles/raw/main/styles/<name>/evergarden.user.css`
    - Replacing `<name>` with the name of the userstyle.
 3. Enjoy!
 
