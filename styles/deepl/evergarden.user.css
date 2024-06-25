@@ -1,18 +1,18 @@
 /* ==UserStyle==
-@name DeepL Catppuccin
-@namespace github.com/catppuccin/userstyles/styles/deepl
-@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/deepl
+@name DeepL Evergarden
+@namespace github.com/comfysage/userstyles/styles/deepl
+@homepageURL https://github.com/comfysage/userstyles/tree/main/styles/deepl
 @version 1.0.2
-@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/deepl/catppuccin.user.css
-@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Adeepl
-@description Soothing pastel theme for DeepL
+@updateURL https://github.com/comfysage/userstyles/raw/main/styles/deepl/evergarden.user.css
+@supportURL https://github.com/comfysage/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Adeepl
+@description comfy theme for DeepL
 @author Catppuccin
 @license MIT
 
 @preprocessor less
 @var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
-@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha", "evergarden:Evergarden*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green*", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
 
 @-moz-document regexp("https:\\/\\/www.deepl.com\\/?(.*\\/)translator.*$") {
@@ -329,6 +329,7 @@
   @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @blue_filter: brightness(0) saturate(100%) invert(68%) sepia(9%) saturate(1948%) hue-rotate(186deg) brightness(98%) contrast(90%); @lavender: #babbf1; @text: #c6d0f5; @text_filter: brightness(0) saturate(100%) invert(80%) sepia(11%) saturate(726%) hue-rotate(192deg) brightness(104%) contrast(92%); @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
   @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @blue_filter: brightness(0) saturate(100%) invert(65%) sepia(13%) saturate(1397%) hue-rotate(184deg) brightness(103%) contrast(91%); @lavender: #b7bdf8; @text: #cad3f5; @text_filter: brightness(0) saturate(100%) invert(84%) sepia(5%) saturate(1385%) hue-rotate(192deg) brightness(101%) contrast(92%); @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
   @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @blue_filter: brightness(0) saturate(100%) invert(65%) sepia(51%) saturate(534%) hue-rotate(188deg) brightness(98%) contrast(101%); @lavender: #b4befe; @text: #cdd6f4; @text_filter: brightness(0) saturate(100%) invert(87%) sepia(6%) saturate(985%) hue-rotate(191deg) brightness(96%) contrast(99%); @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+  @evergarden: { @rosewater: #E3A8D1; @flamingo: #E3A8D1; @pink: #E3A8D1; @mauve: #D6A0D1; @red: #E67E80; @maroon: #E67E80; @peach: #E69875; @yellow: #DBBC7F; @green: #B2C98F; @teal: #93C9A1; @sky: #97C9C3; @sapphire: #9BB5CF; @blue: #9BB5CF; @blue_filter: brightness(0) saturate(100%) invert(65%) sepia(51%) saturate(534%) hue-rotate(188deg) brightness(98%) contrast(101%); @lavender: #D6A0D1; @text: #D9E4DC; @text_filter: brightness(0) saturate(100%) invert(87%) sepia(6%) saturate(985%) hue-rotate(191deg) brightness(96%) contrast(99%); @subtext1: #C9D6D0; @subtext0: #AEC2BE; @overlay2: #99ADAD; @overlay1: #6E8585; @overlay0: #5E6C70; @surface2: #46545B; @surface1: #3D494F; @surface0: #343E44; @base: #252B2E; @mantle: #1C2225; @crust: #171C1F; };
 }
 
 // vim:ft=less
