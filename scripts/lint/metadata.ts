@@ -66,10 +66,9 @@ export const verifyMetadata = async (
     }
   }
 
-  const template = (await Deno.readTextFile(
-    join(REPO_ROOT, "template/catppuccin.user.css"),
-  ))
-    .split("\n");
+  const template =
+    (await Deno.readTextFile(join(REPO_ROOT, "template/evergarden.user.css")))
+      .split("\n");
 
   for (const variable of ["darkFlavor", "lightFlavor", "accentColor"]) {
     const declaration = `@var select ${variable}`;
@@ -155,7 +154,7 @@ const assertions = (userstyle: string, userstyles: Userstyles) => {
         : userstyles[userstyle].name
     }`,
     author: "Catppuccin",
-    updateURL: `${prefix}/raw/main/styles/${userstyle}/catppuccin.user.css`,
+    updateURL: `${prefix}/raw/main/styles/${userstyle}/evergarden.user.css`,
     supportURL: `${prefix}/issues?q=is%3Aopen+is%3Aissue+label%3A${userstyle}`,
     license: "MIT",
     preprocessor: "less",

@@ -27,7 +27,7 @@
   extension).
 - A website to theme!
 
-Assuming you have completed steps 1-4 of [Creating Userstyles](./userstyle-creation.md#creating-userstyles), you should have a new `catppuccin.user.css` file under the `styles/<name-of-website>/` directory. Follow along in that `catppuccin.user.css` file as we write an example userstyle for [example.org](http://example.org/).
+Assuming you have completed steps 1-4 of [Creating Userstyles](./userstyle-creation.md#creating-userstyles), you should have a new `evergarden.user.css` file under the `styles/<name-of-website>/` directory. Follow along in that `evergarden.user.css` file as we write an example userstyle for [example.org](http://example.org/).
 
 ### Usercss Metadata
 
@@ -39,7 +39,7 @@ Start by filling out the "metadata block" at the very top of the template. Repla
 @namespace github.com/catppuccin/userstyles/styles/example.org
 @homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/example.org
 @version 0.0.1
-@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/example.org/catppuccin.user.css
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/example.org/evergarden.user.css
 @supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aexample.org
 @description Soothing pastel theme for example.org
 @author Catppuccin
@@ -145,7 +145,7 @@ Combining all of the previous steps, we have a working userstyle!
 @namespace github.com/catppuccin/userstyles/styles/example.org
 @homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/example.org
 @version 0.0.1
-@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/example.org/catppuccin.user.css
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/example.org/evergarden.user.css
 @supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aexample.org
 @description Soothing pastel theme for example.org
 @author Catppuccin

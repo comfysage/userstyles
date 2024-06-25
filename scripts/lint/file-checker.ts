@@ -7,7 +7,7 @@ import { log } from "@/lint/logger.ts";
 import * as color from "@std/fmt/colors";
 
 const requiredFiles = [
-  "catppuccin.user.css",
+  "evergarden.user.css",
   "preview.webp",
 ];
 
