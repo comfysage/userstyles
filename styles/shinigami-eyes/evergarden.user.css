@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name Next.js Evergarden
-@namespace github.com/comfysage/userstyles/styles/nextjs
-@homepageURL https://github.com/comfysage/userstyles/tree/main/styles/nextjs
-@version 0.0.3
-@updateURL https://github.com/comfysage/userstyles/raw/main/styles/nextjs/evergarden.user.css
-@supportURL https://github.com/comfysage/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Anextjs
-@description comfy theme for Next.js
+@name Shinigami Eyes Evergarden
+@namespace github.com/comfysage/userstyles/styles/shinigami-eyes
+@homepageURL https://github.com/comfysage/userstyles/tree/main/styles/shinigami-eyes
+@version 0.0.1
+@updateURL https://github.com/comfysage/userstyles/raw/main/styles/shinigami-eyes/evergarden.user.css
+@supportURL https://github.com/comfysage/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ashinigami-eyes
+@description comfy theme for Shinigami Eyes
 @author Catppuccin
 @license MIT
 
@@ -15,12 +15,93 @@
 @var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green*", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
 
-@-moz-document domain("nextjs.org") {
-  :root.dark-theme {
-    #catppuccin(@darkFlavor, @accentColor);
+/*
+These are the domains for the sites that Shinigami Eyes works with.
+The list can be found at https://github.com/shinigami-eyes/shinigami-eyes/blob/b66e9ad41fa4daef31886b139d8af6f852efcaaa/extension/manifest.json#L15-L96.
+*/
+@-moz-document domain("facebook.com"),
+  domain("youtube.com"),
+  domain("reddit.com"),
+  domain("twitter.com"),
+  domain("x.com"),
+  domain("medium.com"),
+  domain("disqus.com"),
+  domain("tumblr.com"),
+  domain("wikipedia.org"),
+  domain("rationalwiki.org"),
+  domain("cohost.org"),
+  domain("bsky.app"),
+  domain("anarchism.space"),
+  domain("aus.social"),
+  domain("c.im"),
+  domain("chaos.social"),
+  domain("eightpoint.app"),
+  domain("eldritch.cafe"),
+  domain("fosstodon.org"),
+  domain("hachyderm.io"),
+  domain("infosec.exchange"),
+  domain("kolektiva.social"),
+  domain("mas.to"),
+  domain("masto.ai"),
+  domain("chaosfem.tw"),
+  domain("mastodon.art"),
+  domain("mastodon.cloud"),
+  domain("mastodon.green"),
+  domain("mastodon.ie"),
+  domain("mastodon.nz"),
+  domain("mastodon.online"),
+  domain("mastodon.scot"),
+  domain("mastodon.social"),
+  domain("mastodon.world"),
+  domain("mastodon.xyz"),
+  domain("mastodonapp.uk"),
+  domain("meow.social"),
+  domain("mstdn.ca"),
+  domain("mstdn.jp"),
+  domain("mstdn.social"),
+  domain("octodon.social"),
+  domain("ohai.social"),
+  domain("pixelfed.social"),
+  domain("queer.party"),
+  domain("sfba.social"),
+  domain("social.transsafety.network"),
+  domain("tech.lgbt"),
+  domain("techhub.social"),
+  domain("toot.cat"),
+  domain("toot.community"),
+  domain("toot.wales"),
+  domain("vulpine.club"),
+  domain("wandering.shop"),
+  domain("lgbtqia.space"),
+  domain("threads.net"),
+  domain("duckduckgo.com"),
+  domain("bing.com"),
+  domain("google.ar"),
+  domain("google.at"),
+  domain("google.be"),
+  domain("google.ca"),
+  domain("google.ch"),
+  domain("google.co.uk"),
+  domain("google.com"),
+  domain("google.de"),
+  domain("google.dk"),
+  domain("google.es"),
+  domain("google.fi"),
+  domain("google.fr"),
+  domain("google.is"),
+  domain("google.it"),
+  domain("google.no"),
+  domain("google.pt"),
+  domain("google.se") {
+  @media (prefers-color-scheme: light) {
+    :root {
+      #catppuccin(@lightFlavor, @accentColor);
+    }
   }
-  :root.light-theme {
-    #catppuccin(@lightFlavor, @accentColor);
+  @media (prefers-color-scheme: dark) {
+    :root {
+      #catppuccin(@darkFlavor, @accentColor);
+    }
   }
 
   #catppuccin(@lookup, @accent) {
@@ -52,206 +133,19 @@
     @crust: @catppuccin[@@lookup][@crust];
     @accent-color: @catppuccin[@@lookup][@@accent];
 
-    color-scheme: if(@lookup = latte, light, dark);
-
-    ::selection {
-      background-color: fade(@accent-color, 30%);
+    body {
+      --ShinigamiEyesTFriendly: @green !important;
+      --ShinigamiEyesTransphobic: @red !important;
     }
 
-    input,
-    textarea {
-      &::placeholder {
-        color: @subtext0 !important;
-      }
+    .shinigami-eyes-theme-purple-yellow {
+      --ShinigamiEyesTFriendly: @mauve !important;
+      --ShinigamiEyesTransphobic: @yellow !important;
     }
 
-    --geist-foreground: @text;
-    --geist-background: @mantle;
-    --accents-1: @base;
-    --accents-2: @surface0;
-    --accents-3: @surface1;
-    --accents-4: @surface2;
-    --accents-5: @overlay0;
-    --accents-6: @overlay1;
-    --accents-7: @overlay2;
-    --accents-8: @subtext0;
-    --geist-link-color: @rosewater;
-    --geist-selection: @subtext0;
-    --geist-success: @accent-color;
-    --geist-error: @red;
-    --geist-cyan: @teal;
-
-    --ds-background-100: @base;
-    --ds-background-200: @surface0;
-    --ds-gray-100: @base;
-    --ds-gray-200: @surface0;
-    --ds-gray-300: @surface1;
-    --ds-gray-400: @surface0;
-    --ds-gray-600: @overlay1;
-    --ds-gray-700: @subtext0;
-    --ds-gray-1000: @text;
-    --ds-gray-900: @subtext0;
-    --ds-gray-800: @subtext1;
-
-    --ds-red-800: @red;
-    --ds-red-900: lighten(@red, 5%);
-
-    --ds-blue-300: @surface0;
-    --ds-blue-900: @accent-color;
-
-    /* Links vertical line */
-    .bg-blue-600 {
-      background-color: @accent-color;
-    }
-
-    /* App Router icon */
-    --ds-blue-700: @blue;
-
-    /* Pages Router icon */
-    --ds-purple-700: @mauve;
-
-    --ds-blue-400: @base;
-
-    --ds-purple-400: @base;
-
-    --tw-gradient-top: transparent;
-
-    a h3 {
-      color: @accent-color;
-    }
-
-    p a {
-      color: @accent-color;
-    }
-
-    ul li::marker {
-      color: @accent-color;
-    }
-
-    .text-blue-700 {
-      color: @accent-color;
-    }
-
-    svg {
-      --geist-stroke: var(--geist-background) !important;
-    }
-
-    button[class*="navbar_search"] {
-      background-color: @mantle !important;
-      color: @subtext0;
-    }
-
-    code {
-      color: @accent-color !important;
-    }
-
-    .shadow,
-    .shadow-md,
-    .shadow-sm {
-      box-shadow: none !important;
-    }
-
-    .code-block_wrapper__t6FCO {
-      border-color: 1px solid @surface0 !important;
-    }
-
-    .group:hover .dark\:group-hover\:bg-white {
-      background-color: @subtext1;
-    }
-
-    .group:hover .dark\:group-hover\:text-black {
-      color: @crust;
-    }
-
-    [data-docs-container] code:not(pre code),
-    [data-docs-table-of-contents] code:not(pre code) {
-      border-color: 1px solid @surface0 !important;
-      background-color: @mantle !important;
-    }
-
-    td a {
-      color: @accent-color;
-    }
-
-    .animated-optimizations_window__CjM85 {
-      background: @mantle !important;
-    }
-
-    .features_card__xYla9,
-    .foundation_root__wm0ez,
-    .foundation_card__v7VKB {
-      background: @base;
-    }
-
-    .foundation_cpu__ciXpm {
-      background: @mantle;
-    }
-
-    .header_header__zJOD0 {
-      background: @base;
-    }
-
-    .mute,
-    .subtitle {
-      color: @subtext0;
-    }
-
-    .mobile-menu_mobileMenu__xqbOP a.mobile-menu_selected__G55UL {
-      color: var(--geist-background);
-    }
-
-    .dark-theme .dark\:bg-black\/50 {
-      background-color: var(--geist-background);
-    }
-
-    .gradient,
-    .gradient-text {
-      --text-gradient: @text;
-    }
-
-    .bg-background-200,
-    .bg-vercel-100 {
-      background-color: @mantle;
-    }
-
-    .guides_book__j9vP8 {
-      background: @base !important;
-    }
-
-    .guides_bind__9COxI {
-      background: @overlay0 !important;
-    }
-
-    .bg-gray-50 {
-      background-color: @mantle;
-    }
-
-    .styled-scrollbar {
-      scrollbar-color: @accent-color transparent;
-    }
-
-    .code-block_pre___OLfy {
-      --shiki-token-punctuation: @overlay2;
-      --shiki-token-constant: @peach;
-      --shiki-token-string: @green;
-      --shiki-token-string-expression: @green;
-      --shiki-token-comment: @overlay0;
-      --shiki-token-keyword: @mauve;
-      --shiki-token-parameter: @maroon;
-      --shiki-token-function: @blue;
-    }
-
-    img[alt="GitHub Logo"] {
-      @svg: escape(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.673" viewBox="0 0 16 15.673"><path fill="@{subtext0}" fill-rule="evenodd" d="M7.976 0C3.566 0 0 3.592 0 8.035a8.03 8.03 0 0 0 5.454 7.623c.396.08.541-.173.541-.386 0-.186-.013-.825-.013-1.49-2.219.479-2.681-.958-2.681-.958-.357-.931-.885-1.171-.885-1.171-.726-.492.053-.492.053-.492.806.053 1.228.825 1.228.825.713 1.224 1.862.878 2.324.665.066-.519.277-.878.502-1.078-1.77-.186-3.632-.878-3.632-3.965 0-.878.317-1.596.819-2.155-.079-.2-.357-1.024.079-2.129 0 0 .673-.213 2.192.825a7.7 7.7 0 0 1 1.994-.266c.673 0 1.36.093 1.994.266 1.519-1.038 2.192-.825 2.192-.825.436 1.104.158 1.929.079 2.129.515.559.819 1.277.819 2.155 0 3.087-1.862 3.765-3.645 3.965.291.253.541.732.541 1.49 0 1.078-.013 1.942-.013 2.208 0 .213.145.466.541.386a8.03 8.03 0 0 0 5.454-7.623C15.952 3.592 12.374 0 7.976 0" clip-rule="evenodd"/></svg>'
-      );
-      content: url("data:image/svg+xml,@{svg}");
-    }
-    img[alt="X Logo"] {
-      @svg: escape(
-        '<svg xmlns="http://www.w3.org/2000/svg" fill="none" height="16" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="16"><path fill="@{subtext0}" d="M16.99 0h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L3.736 19.5H.426l7.73-8.835L0 0h6.826l4.713 6.231zm-1.161 17.52h1.833L5.83 1.876H3.863z" stroke="none"/></svg>'
-      );
-      content: url("data:image/svg+xml,@{svg}");
+    .shinigami-eyes-theme-cyan-orange {
+      --ShinigamiEyesTFriendly: @sapphire !important;
+      --ShinigamiEyesTransphobic: @peach !important;
     }
   }
 }
