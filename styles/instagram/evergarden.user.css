@@ -1,18 +1,18 @@
 /* ==UserStyle==
-@name Instagram Catppuccin
-@namespace github.com/catppuccin/userstyles/styles/instagram
-@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/instagram
+@name Instagram Evergarden
+@namespace github.com/comfysage/userstyles/styles/instagram
+@homepageURL https://github.com/comfysage/userstyles/tree/main/styles/instagram
 @version 0.2.5
-@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/instagram/evergarden.user.css
-@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ainstagram
-@description Soothing pastel theme for Instagram
+@updateURL https://github.com/comfysage/userstyles/raw/main/styles/instagram/evergarden.user.css
+@supportURL https://github.com/comfysage/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Ainstagram
+@description comfy theme for Instagram
 @author Catppuccin
 @license MIT
 
 @preprocessor less
 @var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
-@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
-@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha", "evergarden:Evergarden*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green*", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
 ==/UserStyle== */
 
 @-moz-document domain('instagram.com') {
@@ -840,6 +840,9 @@
   };
   @mocha: {
     @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b;
+    @text-filter: brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(1356%) hue-rotate(194deg) brightness(103%) contrast(91%);
+  };
+  @evergarden: { @rosewater: #E3A8D1; @flamingo: #E3A8D1; @pink: #E3A8D1; @mauve: #D6A0D1; @red: #E67E80; @maroon: #E67E80; @peach: #E69875; @yellow: #DBBC7F; @green: #B2C98F; @teal: #93C9A1; @sky: #97C9C3; @sapphire: #9BB5CF; @blue: #9BB5CF; @lavender: #D6A0D1; @text: #D9E4DC; @subtext1: #C9D6D0; @subtext0: #AEC2BE; @overlay2: #99ADAD; @overlay1: #6E8585; @overlay0: #5E6C70; @surface2: #46545B; @surface1: #3D494F; @surface0: #343E44; @base: #252B2E; @mantle: #1C2225; @crust: #171C1F;
     @text-filter: brightness(0) saturate(100%) invert(85%) sepia(6%) saturate(1356%) hue-rotate(194deg) brightness(103%) contrast(91%);
   };
 }
